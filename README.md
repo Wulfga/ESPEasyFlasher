@@ -1,5 +1,3 @@
 # ESPEasyFlasher
 
-Small and super light UI for Flashing ESPEasy with esptool. .NET 4.5.2 required.
-
-![Screenshot](screenshot.png)
+Small and super light UI for Flashing ESPEasy baes on [esptool](https://github.com/igrr/esptool-ck). .NET 4.5.2 required.
