@@ -35,11 +35,13 @@
             this.cbx_firmware = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.speed = new System.Windows.Forms.ComboBox();
+            this.SearchFile_btn = new System.Windows.Forms.Button();
+            this.FilePath_box = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bttn_flash
             // 
-            this.bttn_flash.Location = new System.Drawing.Point(302, 174);
+            this.bttn_flash.Location = new System.Drawing.Point(302, 154);
             this.bttn_flash.Name = "bttn_flash";
             this.bttn_flash.Size = new System.Drawing.Size(75, 23);
             this.bttn_flash.TabIndex = 0;
@@ -76,9 +78,9 @@
             // cbx_firmware
             // 
             this.cbx_firmware.FormattingEnabled = true;
-            this.cbx_firmware.Location = new System.Drawing.Point(98, 78);
+            this.cbx_firmware.Location = new System.Drawing.Point(66, 252);
             this.cbx_firmware.Name = "cbx_firmware";
-            this.cbx_firmware.Size = new System.Drawing.Size(279, 21);
+            this.cbx_firmware.Size = new System.Drawing.Size(198, 21);
             this.cbx_firmware.TabIndex = 4;
             // 
             // label1
@@ -86,27 +88,54 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Upload speed";
+            this.label1.Text = "Baudrate";
             // 
             // speed
             // 
             this.speed.FormattingEnabled = true;
             this.speed.Items.AddRange(new object[] {
-                "4800","9600","14400","19200","38400","57600","115200","230400","460800","921600"
-            });
-            this.speed.SelectedItem = "115200";
+            "4800",
+            "9600",
+            "14400",
+            "19200",
+            "38400",
+            "57600",
+            "115200",
+            "230400",
+            "460800",
+            "921600"});
             this.speed.Location = new System.Drawing.Point(98, 122);
             this.speed.Name = "speed";
             this.speed.Size = new System.Drawing.Size(121, 21);
             this.speed.TabIndex = 6;
             // 
+            // SearchFile_btn
+            // 
+            this.SearchFile_btn.Location = new System.Drawing.Point(302, 76);
+            this.SearchFile_btn.Name = "SearchFile_btn";
+            this.SearchFile_btn.Size = new System.Drawing.Size(75, 23);
+            this.SearchFile_btn.TabIndex = 7;
+            this.SearchFile_btn.Text = "Search..";
+            this.SearchFile_btn.UseVisualStyleBackColor = true;
+            this.SearchFile_btn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FilePath_box
+            // 
+            this.FilePath_box.Location = new System.Drawing.Point(98, 78);
+            this.FilePath_box.Name = "FilePath_box";
+            this.FilePath_box.ReadOnly = true;
+            this.FilePath_box.Size = new System.Drawing.Size(198, 20);
+            this.FilePath_box.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 209);
+            this.ClientSize = new System.Drawing.Size(398, 185);
+            this.Controls.Add(this.FilePath_box);
+            this.Controls.Add(this.SearchFile_btn);
             this.Controls.Add(this.speed);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbx_firmware);
@@ -115,7 +144,7 @@
             this.Controls.Add(this.lbl_serial);
             this.Controls.Add(this.bttn_flash);
             this.Name = "Form1";
-            this.Text = "ESPEasy Flasher";
+            this.Text = "Sonoff Flasher";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +159,8 @@
         private System.Windows.Forms.ComboBox cbx_firmware;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox speed;
+        private System.Windows.Forms.Button SearchFile_btn;
+        private System.Windows.Forms.TextBox FilePath_box;
     }
 }
 
